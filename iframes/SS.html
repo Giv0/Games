@@ -8,14 +8,14 @@ var gametime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 30,
 if (gametime < 0) {
      gametime += 55800000; // it's after 10am, try 10am tomorrow.
 }
-if (25200000 > gametime > 0) {location.reload}
-setTimeout(function prepareFrame() {
+if (25200000 < gametime) {function prepareFrame() {
         var ifrm = document.createElement("iframe");
         ifrm.setAttribute("src", "https://shellshock.io");
         ifrm.style.width = "1280px";
         ifrm.style.height = "720px";
         document.body.appendChild(ifrm);
-    }, gametime);
+    }}
+else if (25200000 > gametime) {location.reload();}
 
 </script>
 
