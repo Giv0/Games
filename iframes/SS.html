@@ -17,5 +17,13 @@ if (25200000 < gametime) {function prepareFrame() {
     }}
 else if (25200000 > gametime) {location.reload();}
 
+     
+     function prepareFrame() {
+        var ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", "https://shellshock.io");
+        ifrm.style.width = "1280px";
+        ifrm.style.height = "720px";
+        document.body.appendChild(ifrm);
+    }
 </script>
 
