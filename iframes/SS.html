@@ -1,10 +1,11 @@
 <a href="../index.html"><button>Back to the other games</button></a> Scroll down for servers!(Work in progress)  Game will close at 8:30 and open at 3:30 everyday!
-<iframe id="game" src="https://shellshock.io" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+<button onclick="changeUrl()">Load page in iframe</button>
+<iframe id="game" src="nogameforyou" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
 <iframe id="list" src="../servers.html" width="100%" height="100%" scrolling="no"></iframe>
 
 <script>
 <iframe src="https://shellshock.io" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
-/*var now = new Date();
+var now = new Date();
 var src = document.getElementById('list');
 var ss = document.getElementById('game');
 var gametime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 30, 0, 0) - now;
@@ -12,14 +13,12 @@ if (gametime < 0) {
      gametime += 55800000; 
 }
 if (25200000 > gametime) {ss.src = nogameforyou}
-else if (25200000 < gametime) {location.reload();} */
+else if (25200000 < gametime) {location.reload();} 
+
+function changeUrl() {
+    var site = "https:shellshock.io";
+    if (25200000 > gametime) {
+     document.getElementsByName('game')[0].src = site;
+}}
 
 </script>
-<body onpageshow="load()">
-     <script>
-          function load() {
-          location.reload;
-          alert("ggs my dude");
-          }
-     </script>
-</body>
