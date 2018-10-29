@@ -1,5 +1,4 @@
 <a href="../index.html"><button>Back to the other games</button></a> Scroll down for servers!(Work in progress)  Game will close at 8:30 and open at 3:30 everyday!
-<button onclick="playgame()">Play SHELL SHOCKERS!</button>
 <iframe id="game" src="https://shellshock.io" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
 <iframe id="list" src="../servers.html" width="100%" height="100%" scrolling="no"></iframe>
 
@@ -12,16 +11,9 @@ var gametime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 30,
 if (gametime < 0) {
      gametime += 55800000; 
 }
-if (25200000 < gametime) {ss.src = src;}
-else if (25200000 > gametime) {location.reload();}
+if (25200000 > gametime) {ss.src = src;}
+else if (25200000 < gametime) {location.reload();}
 
-function playgame() {
-        var ifrm = document.createElement("iframe");
-        ifrm.setAttribute("src", "https://shellshock.io");
-        ifrm.style.width = "1280px";
-        ifrm.style.height = "720px";
-        document.body.appendChild(ifrm);
-    }
      
 </script>
 
