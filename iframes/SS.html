@@ -9,15 +9,13 @@ if (gametime < 0) {
      gametime += 55800000; // it's after 10am, try 10am tomorrow.
 }
 if (25200000 > gametime > 0) {location.reload}
-setTimeout(<script type="text/javascript">
-    function prepareFrame() {
+setTimeout(function prepareFrame() {
         var ifrm = document.createElement("iframe");
         ifrm.setAttribute("src", "https://shellshock.io");
         ifrm.style.width = "1280px";
         ifrm.style.height = "720px";
         document.body.appendChild(ifrm);
-    }
-</script> , gametime);
+    }, gametime);
 
 </script>
 
