@@ -1,0 +1,18 @@
+<a href="../index.html"><button>Back to the other games</button></a>
+<button onclick="openFullscreen();">Make fullscreen</button>
+<iframe id="game" src="https://www.pacogames.com/driving/city-car-driving-simulator" width="100%" sandbox="allow-forms allow-popups allow-pointer-lock allow-same-origin allow-scripts" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+
+<script>
+var elem = document.getElementById("game");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
