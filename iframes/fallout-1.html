@@ -1,3 +1,18 @@
 <a href="../index.html"><button>Back to the other games</button></a> Click on "Play Game," skip the ad, click the big white arrow, and be patient! Feel free to let the game load in the background. It may take close 5 minutes to load!
 <button onclick="openFullscreen();">Make fullscreen</button>
 <iframe id="game" src="https://www.gameflare.com/embed/fallout-1/" width="640" height="510" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+
+<script>
+var elem = document.getElementById("game");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
