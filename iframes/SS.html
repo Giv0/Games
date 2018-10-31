@@ -1,28 +1,30 @@
+<script>
+var now = new Date();
+var time = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0, 0, 0) - now;
+if (time < 0) {
+     time += 86400000; 
+}
+alert(time);
+var reload = time;
+if (reload != time) {reload = time};
+if (30600000 > time) {alert("Not during school!")};
+</script>
+
 <a href="../index.html"><button>Back to the other games</button></a>
 <button onclick="openFullscreen();">Make fullscreen</button>
 Scroll down for servers!(Work in progress)  Press the button to play! If the time is between 8:30 - 3:30, the game wont load.
-<iframe id="game" src="https://shellshock.io" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+<iframe id="game" src="https://google.com" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
 <iframe id="list" src="../servers.html" width="100%" height="100%" scrolling="no"></iframe>
 
 <script>
-<iframe src="https://shellshock.io" width="100%" height="100%" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen></iframe>
 var now = new Date();
-var src = document.getElementById('list');
-var ss = document.getElementById('game');
-var gametime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 30, 0, 0) - now;
-if (gametime < 0) {
-     gametime += 55800000; 
+var time = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0, 0, 0) - now;
+if (time < 0) {
+     time += 86400000; 
 }
-else if (25200000 < gametime) {location.reload();} 
-
-function changeUrl() {
-    var site = "https:shellshock.io";
-    if (25200000 < gametime) {
-     document.getElementsByName('game')[0].src = site;
-}}
-
+if (30600000 < time) {document.getElementById("game").src = "https://shellshock.io"}
+else {}
 </script>
-
 <script>
 var elem = document.getElementById("game");
 function openFullscreen() {
