@@ -4,9 +4,9 @@ var time = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 13, 30, 0,
 if (time < 0) {
      time += 86400000; 
 }
-
+alert(time);
 function mouseOver() {
-    if (25200000 < time) {
+    if (25200000 > time) {
 alert("You cannot play this game at school! So here. Enjoy this mirror image of yourself."); 
 document.getElementById("game").src = "https://giv0.github.io/Games/iframes/cat.webp";
 };
